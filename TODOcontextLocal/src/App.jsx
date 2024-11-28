@@ -21,7 +21,7 @@ function App() {
       setTodos((prev) => prev.filter((prevTodo) => prevTodo.id !== id))
      }
      const toggleTodo =(id) =>{
-      setTodos((prev) => prev.map((prevTodo) => prevTodo ===id ? 
+      setTodos((prev) => prev.map((prevTodo) => prevTodo.id ===id ? 
       {...prevTodo ,completed: !prevTodo.completed} : prevTodo))
      }
 
@@ -51,7 +51,7 @@ function App() {
                     <div className="flex flex-wrap gap-y-3">
                         {/*Loop and Add TodoItem here */}
                         {todos.map((todo)=>(
-                          <div key={todo.id}
+                          <div key={todos.id}
                            className = 'w-full' > 
                            <TodoItem todo={todo} />
 
